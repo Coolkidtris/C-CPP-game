@@ -62,6 +62,9 @@
     "xlocale": "cpp",
     "sdl.h": "c",
     "sdl_main.h": "c",
-    "sdl_stdinc.h": "c"
+    "sdl_stdinc.h": "c",
+    "stdlib.h": "c",
+    "xiosbase": "c",
+    "iostream": "cpp"
   }
 }

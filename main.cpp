@@ -1,10 +1,7 @@
 #include <iostream>
+using namespace std;
 
-char name[256];
-
-int main(){
-    std::cout << "What is your name?\n";
-    std::cin >> name;
-    std::cout << "Hello," << name;
-    return 0;
+int main() {
+  cout << "I Hate World!";
+  return 0;
 }
