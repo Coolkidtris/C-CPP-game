@@ -1,0 +1,1 @@
+g++ -o main visual.c -I/c/msys64/ucrt64/include/SDL2 -L/c/msys64/ucrt64/lib -lmingw32 -lSDL2main -lSDL2 -l SDL2_image

@@ -15,12 +15,17 @@ SDL_Renderer *renderer;
 SDL_Texture *tileSet;
 SDL_Rect tileRect; 
 
+SDL_Rect setUpRect(int x, int y, int w, int h){
+    SDL_Rect newRect = {x,y,w,h};
+    return newRect;
+}
+
 void setupSDL(){
     window = SDL_CreateWindow("Tiles", WINDOW_POSX, WINDOWS_POSY, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
     renderer  = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED );
     tileSet = IMG_LoadTexture(renderer, "Tile.png");
     
-    SDL_Rect tileRect = {0,0,100,100};
+    tileRect = setUpRect(0,0,100,100);
     printf("SDL setup\n");
 }
 
@@ -50,7 +55,6 @@ void mainLoop(){
 
 void cleanupSDL(){
     SDL_DestroyTexture(tileSet);
-
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
